@@ -5,6 +5,10 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+group :production do
+  gem 'pg'
+end
+
 gem 'sqlite3'
 
 
@@ -17,9 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-group :production do
-  gem 'pg'
-end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
