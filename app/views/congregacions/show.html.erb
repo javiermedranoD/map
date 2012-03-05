@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @congregacion.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @congregacion.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @congregacion.address %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%= @congregacion.mail %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @congregacion.lat %>
+</p>
+
+<p>
+  <b>Lon:</b>
+  <%= @congregacion.lon %>
+</p>
+
+
+<%= link_to 'Edit', edit_congregacion_path(@congregacion) %> |
+<%= link_to 'Back', congregacions_path %>
+

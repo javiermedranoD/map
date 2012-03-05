@@ -1,0 +1,34 @@
+<h1>Listado de Congregaciones</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Teléfono</th>
+    <th>Dirección</th>
+    <th>Email</th>
+    <th>Latitud</th>
+    <th>Longitud</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @congregacions.each do |congregacion| %>
+  <tr>
+    <td><%= congregacion.name %></td>
+    <td><%= congregacion.phone %></td>
+    <td><%= congregacion.address %></td>
+    <td><%= congregacion.mail %></td>
+    <td><%= congregacion.lat %></td>
+    <td><%= congregacion.lon %></td>
+    <td><%= link_to 'Ver', congregacion %></td>
+    <td><%= link_to 'Editar', edit_congregacion_path(congregacion) %></td>
+    <td><%= link_to 'Eliminar', congregacion, confirm: 'Está seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Agregar Congregación', new_congregacion_path %> | 
+<%= link_to 'Ver mapa', :controller => "congregacions", :action => "vermapa"%>
