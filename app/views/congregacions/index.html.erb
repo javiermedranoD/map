@@ -1,5 +1,5 @@
 <h1>Listado de Congregaciones</h1>
-
+<div id="MainWrapper">
 <table>
   <tr>
     <th>Nombre</th>
@@ -21,14 +21,14 @@
     <td><%= congregacion.mail %></td>
     <td><%= congregacion.lat %></td>
     <td><%= congregacion.lon %></td>
-    <td><%= link_to 'Ver', congregacion %></td>
-    <td><%= link_to 'Editar', edit_congregacion_path(congregacion) %></td>
-    <td><%= link_to 'Eliminar', congregacion, confirm: 'Está seguro?', method: :delete %></td>
+    <td id="ver"><%= link_to 'Ver', congregacion %></td>
+    <td id="editar"><%= link_to 'Editar', edit_congregacion_path(congregacion) %></td>
+    <td id="eliminar"><%= link_to 'Eliminar', congregacion, confirm: 'Está seguro?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
+</div>
 <br />
 
-<%= link_to 'Agregar Congregación', new_congregacion_path %> | 
-<%= link_to 'Ver mapa', :controller => "congregacions", :action => "vermapa"%>
+

@@ -1,0 +1,33 @@
+<h1>Listing grupo_biblicos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Mail</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @grupo_biblicos.each do |grupo_biblico| %>
+  <tr>
+    <td><%= grupo_biblico.name %></td>
+    <td><%= grupo_biblico.phone %></td>
+    <td><%= grupo_biblico.address %></td>
+    <td><%= grupo_biblico.mail %></td>
+    <td><%= grupo_biblico.lat %></td>
+    <td><%= grupo_biblico.lon %></td>
+    <td><%= link_to 'Show', grupo_biblico %></td>
+    <td><%= link_to 'Edit', edit_grupo_biblico_path(grupo_biblico) %></td>
+    <td><%= link_to 'Destroy', grupo_biblico, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Grupo biblico', new_grupo_biblico_path %>

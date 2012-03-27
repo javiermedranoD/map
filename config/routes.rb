@@ -1,4 +1,8 @@
 Map::Application.routes.draw do
+  resources :unidadevangelismos
+
+  resources :grupo_biblicos
+
   resources :congregacions
   
   match 'vermapa' => 'congregacions#vermapa' 

@@ -11,9 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301012301) do
+ActiveRecord::Schema.define(:version => 20120324142410) do
 
   create_table "congregacions", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "mail"
+    t.float    "lat"
+    t.float    "lon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grupo_biblicos", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "mail"
+    t.float    "lat"
+    t.float    "lon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "unidadevangelismos", :force => true do |t|
     t.string   "name"
     t.string   "phone"
     t.string   "address"

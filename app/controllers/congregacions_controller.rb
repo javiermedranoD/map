@@ -83,5 +83,7 @@ class CongregacionsController < ApplicationController
   
   def vermapa
     @mapa = Congregacion.all 
+    @grupos= GrupoBiblico.all
+    @unidades= Unidadevangelismo.all
   end
 end

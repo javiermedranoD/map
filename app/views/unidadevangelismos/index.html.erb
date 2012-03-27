@@ -1,0 +1,33 @@
+<h1>Listing unidadevangelismos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Mail</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @unidadevangelismos.each do |unidadevangelismo| %>
+  <tr>
+    <td><%= unidadevangelismo.name %></td>
+    <td><%= unidadevangelismo.phone %></td>
+    <td><%= unidadevangelismo.address %></td>
+    <td><%= unidadevangelismo.mail %></td>
+    <td><%= unidadevangelismo.lat %></td>
+    <td><%= unidadevangelismo.lon %></td>
+    <td><%= link_to 'Show', unidadevangelismo %></td>
+    <td><%= link_to 'Edit', edit_unidadevangelismo_path(unidadevangelismo) %></td>
+    <td><%= link_to 'Destroy', unidadevangelismo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Unidadevangelismo', new_unidadevangelismo_path %>

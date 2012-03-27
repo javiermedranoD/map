@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @grupo_biblico.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @grupo_biblico.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @grupo_biblico.address %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%= @grupo_biblico.mail %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @grupo_biblico.lat %>
+</p>
+
+<p>
+  <b>Lon:</b>
+  <%= @grupo_biblico.lon %>
+</p>
+
+
+<%= link_to 'Edit', edit_grupo_biblico_path(@grupo_biblico) %> |
+<%= link_to 'Back', grupo_biblicos_path %>
